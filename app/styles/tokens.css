@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* ---------- 
+      Colors 
+  ------------- */
+  
+  /* background */
+  
+  --bg: #0d0d0d;
+  --surface: #161616;
+  
+  /* text */
+  
+  --text: #f0f0f0;
+  --text-muted: rgba(240,240,240,0.4);
+  
+  /* accent */
+  
+  --accent: #7c5cbf;
+  --accent-hover: #9370d8;
+  --accent-subtle: rgba(124, 92, 191, 0.08);
+  --accent-border: rgba(124, 92, 191, 0.3);
+  
+  /* borders */
+  
+  --border: rgba(240,240,240,0.12);
+  --border-subtle: rgba(240,240,240,0.06);
+
+  /* ------------ 
+    Transitions
+  ------------- */
+  
+  --transition: 0.15s ease;
+
+  /* ------------ 
+    Z-index
+  ------------- */
+  --z-base:    0;
+  --z-content: 5;
+  --z-nav:     10;
+}
+
