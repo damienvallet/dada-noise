@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./Navbar.module.css";
+import styles from "./NavBar.module.css";
 
 const navLinks = [
   { href: "/", label: "Home" },
