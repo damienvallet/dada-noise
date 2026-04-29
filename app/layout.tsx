@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bebas_Neue, DM_Mono, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
+import NavBar from "./components/NavBar";
+
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebasneue",
   subsets: ["latin"],
@@ -36,7 +38,10 @@ export default function RootLayout({
       lang="en"
       className={`${bebasNeue.variable} ${dmMono.variable} ${libreBaskerville.variable} `}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
