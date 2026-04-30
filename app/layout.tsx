@@ -39,7 +39,7 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${dmMono.variable} ${libreBaskerville.variable} `}
     >
       <body className="min-h-full flex flex-col">
-        {/* <NavBar /> */}
+        <NavBar />
         {children}
       </body>
     </html>
