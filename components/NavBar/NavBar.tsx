@@ -33,7 +33,7 @@ export default function NavBar() {
 
       <div className={styles.availability}>
         <span className={styles.dot} />
-        Available
+        Sound & Code
       </div>
     </nav>
   );

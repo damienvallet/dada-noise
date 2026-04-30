@@ -3,6 +3,7 @@ import { Bebas_Neue, DM_Mono, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer/Footer";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebasneue",
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
