@@ -1,4 +1,7 @@
 import styles from "./Hero.module.css";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className={styles.hero}>
@@ -15,7 +18,22 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className={styles.hero_right}></div>
+      <div className={styles.hero_right}>
+        <div className={styles.avatar}>
+          {/* <Image src={null} alt="a pic of Damien Vallet"></Image> */}
+          <div className={styles.avatar_meta}>
+            <span>Damien Vallet - 2026</span>
+          </div>
+        </div>
+        <div className={styles.cta}>
+          <Link className={styles.cta_primary} href={"./Projects"}>
+            View Projects
+          </Link>
+          <Link className={styles.cta_ghost} href={"./Projects"}>
+            ↓ Scroll
+          </Link>
+        </div>
+      </div>
     </section>
   );
 }
