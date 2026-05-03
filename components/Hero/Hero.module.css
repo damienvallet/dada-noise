@@ -1,18 +1,13 @@
-:root {
-  font-family: --var(--font-display);
-  color: var(--text)
-}
-
 .hero {
   position: relative;
-  z-index: var(--content);
+  z-index: var(--z-content);
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
   min-height: 360px;
 }
 
-.hero_left {
+.heroLeft {
   padding: 52px 40px;
   border-right: 1px solid var(--border);
   display: flex;
@@ -20,7 +15,7 @@
   justify-content: space-between;
 }
 
-.hero_right {
+.heroRight {
   padding: 40px;
   border-right: 1px solid var(--border);
   display: flex;
@@ -28,7 +23,7 @@
   justify-content: space-between;
 }
 
-.hero_index {
+.heroIndex {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.16em;
@@ -37,12 +32,12 @@
   margin-bottom: 28px;
 }
 
-.hero_title {
+.heroTitle {
   font-family: var(--font-display);
   font-size: 96px;
   line-height: 0.9;
   letter-spacing: 0.02em;
-  color: #f0f0f0;
+  color: var(--text);
   margin: 0;
 }
 
@@ -52,7 +47,7 @@
 }
 
 .violet {
-  color: #7c5cbf;
+  color: var(--accent);
 }
 
 .tagline {
@@ -66,7 +61,7 @@
 }
 
 .avatar {
-  border: 1px solid rgba(240, 240, 240, 0.1);
+  border: 1px solid var(--border);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -74,7 +69,7 @@
   justify-content: center;
 }
 
-.avatar_meta {
+.avatarMeta {
   position: absolute;
   bottom: 12px;
   left: 0;
@@ -85,7 +80,7 @@
   z-index: 2;
 }
 
-.avatar_label {
+.avatarLabel {
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.14em;
@@ -99,11 +94,11 @@
   margin-top: 16px;
 }
 
-.cta_primary {
+.ctaPrimary {
   flex: 1;
-  background: #7c5cbf;
-  color: #f0f0f0;
-  font-family: 'DM Mono', monospace;
+  background: var(--accent);
+  color: var(--text);
+  font-family: var(--font-mono);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -116,13 +111,23 @@
   transition: background 0.15s;
 }
 
-.cta_ghost {
+.ctaPrimary:hover {
+  background: var(--accent-hover);
+}
+
+.ctaGhost {
   padding: 14px 20px;
-  border: 1px solid rgba(240, 240, 240, 0.15);
+  border: 1px solid var(--border);
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(240, 240, 240, 0.45);
+  color: var(--text-muted);
   text-decoration: none;
   white-space: nowrap;
+}
+
+.ctaGhost:hover {
+  border-color: var(--accent-border);
+  color: var(--text);
+  transition: color var(--transition), border-color var(--transition);
 }
