@@ -7,6 +7,10 @@
   min-height: 360px;
 }
 
+.hero:last-child {
+  border-right: none;
+}
+
 .heroLeft {
   padding: 52px 40px;
   border-right: 1px solid var(--border);
