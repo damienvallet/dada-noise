@@ -4,6 +4,7 @@ import "./globals.css";
 
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer/Footer";
+import GridOverlay from "@/components/common/GridOverlay";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebasneue",
@@ -40,6 +41,7 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${dmMono.variable} ${libreBaskerville.variable} `}
     >
       <body className="min-h-full flex flex-col">
+        <GridOverlay />
         <NavBar />
         {children}
         <Footer />
