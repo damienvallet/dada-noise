@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 import Link from "next/link";
 import GeometricPortrait from "../common/GeometricPortrait";
+import ScrollButton from "./ScrollButton";
 
 export default function Hero() {
   return (
@@ -29,7 +30,7 @@ export default function Hero() {
           <Link className={styles.ctaPrimary} href="./projects">
             View Projects
           </Link>
-          <button className={styles.ctaGhost}>↓ Scroll</button>
+          <ScrollButton />
         </div>
       </div>
     </section>

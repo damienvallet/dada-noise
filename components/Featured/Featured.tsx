@@ -45,7 +45,7 @@ const projects: Project[] = [
 
 export default function Featured() {
   return (
-    <section className={style.featured}>
+    <section id="featured" className={style.featured}>
       <div className={style.header}>
         <span className={style.featTitle}>Selected work</span>
         <Link className={style.featLink} href={"/projects"}>
