@@ -1,9 +1,9 @@
-.featured{
+.featured {
   position: relative;
   z-index: var(--z-content);
 }
 
-.header{
+.header {
   font-family: var(--font-mono);
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@
   color: var(--text-muted);
 }
 
-.featLink{
+.featLink {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -32,13 +32,13 @@
   color: var(--accent-hover);
 }
 
-.projRow{
+.projRow {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr ;
+  grid-template-columns: 2fr 1fr 1fr;
   border-bottom: 1px solid var(--border);
 }
 
-.proj{
+.proj {
   padding: 20px 24px;
   border-right: 1px solid var(--border);
   cursor: pointer;
@@ -53,7 +53,7 @@
   background: var(--accent-subtle);
 }
 
-.projTop{
+.projTop {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -61,8 +61,8 @@
 
 }
 
-.projTag{
-  
+.projTag {
+
   font-size: 8px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -77,7 +77,7 @@
   letter-spacing: 0.06em;
 }
 
-.projVis{
+.projVis {
   height: 56px;
   display: flex;
   align-items: center;
@@ -85,14 +85,14 @@
   border: 1px solid var(--border);
 }
 
-.projName{
+.projName {
   font-family: var(--font-display);
   font-size: 20px;
   letter-spacing: 0.04em;
   color: var(--text);
 }
 
-.projSub{
+.projSub {
   font-family: var(--font-mono);
   font-size: 9px;
   color: var(--text-muted);
@@ -102,4 +102,13 @@
 
 .proj:last-child {
   border-right: none;
+}
+
+.projCert {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 4px;
 }
