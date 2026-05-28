@@ -1,7 +1,3 @@
-div {
-  font-family: var(--font-mono);
-}
-
 .header {
   position: relative;
   z-index: var(--z-content);
@@ -75,6 +71,55 @@ div {
   border-bottom: 1px solid var(--border);
 }
 
+.card {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: background var(--transition);
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.card:hover {
+  background: var(--accent-subtle);
+}
+
+.cardFeatured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.thumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* background: var(--accent); */
+
+}
+
+.scan {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(240, 240, 240, 0.008) 3px, rgba(240, 240, 240, 0.008) 4px);
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+
 .cardTitle {
   font-family: var(--font-serif);
   font-size: 22px;
@@ -104,8 +149,69 @@ div {
   flex-wrap: wrap;
 }
 
+.toolTag {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  background: rgba(240, 240, 240, 0.05);
+  ;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
 .cardArrow {
   font-size: 13px;
   color: var(--text);
   transition: color var(--transition);
+}
+
+.wideRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardBody {
+  padding: 20px 24px;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cardTag {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid var(--border);
+  color: var(--accent);
+}
+
+.cardYear {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.featuredCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.description {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.cardCert {
+  font-size: 10px;
+  color: var(--accent);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
