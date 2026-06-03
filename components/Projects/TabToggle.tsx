@@ -23,6 +23,7 @@ export default function TabToggle({
     <>
       <div className={styles.toggleBar}>
         <button
+          type="button"
           className={`${styles.toggleBtn} ${activeTab === "sound" ? styles.toggleActive : ""}`}
           onClick={() => setActiveTab("sound")}
         >
@@ -44,7 +45,10 @@ export default function TabToggle({
         <div className={styles.filterLabel}>Filter by discipline</div>
       </div>
 
-      <ProjectsGrid projects={currentProjects} />
+      <ProjectsGrid
+        projects={currentProjects}
+        gridType={activeTab === "sound" ? "sound" : "dev"}
+      />
     </>
   );
 }

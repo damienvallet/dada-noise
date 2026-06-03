@@ -27,12 +27,12 @@
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .pageTitle {
-  font-family: var(--display);
+  font-family: var(--font-display);
   font-size: 52px;
   line-height: 0.9;
   letter-spacing: 0.02em;
@@ -65,9 +65,86 @@
   color: var(--accent);
 }
 
+
+.toggleBar {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+  height: 48px;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 32px;
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-right: 1px solid var(--border);
+  transition: background var(--transition);
+  font-family: var(--font-mono);
+}
+
+.toggleActive {
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+  background: var(--accent-subtle)
+}
+
+.toggleBtn:hover {
+  background: var(--border-subtle)
+}
+
+.togglePill {
+  font-size: 9px;
+  padding: 2px 6px;
+  border: 1px solid var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.toggleBtn:active .togglePill {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-left: 1px solid var(--border);
+}
+
+.toggleSpacer {
+  flex: 1;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.soundGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.devGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   border-bottom: 1px solid var(--border);
 }
 
@@ -95,40 +172,56 @@
   border-right: none;
 }
 
-.thumb {
+.cardFeatured .cardThumb {
+  height: 100%;
+  min-height: 200px;
+  border-bottom: none;
+  border-right: 1px solid var(--border-subtle);
+  background: var(--surface);
+}
+
+.cardThumb {
+  height: 140px;
   position: relative;
+  background: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* background: var(--accent); */
-
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.scan {
+.cardScan {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(240, 240, 240, 0.008) 3px, rgba(240, 240, 240, 0.008) 4px);
 }
 
-.waveform {
+.cardWaveform {
   display: flex;
   align-items: center;
   gap: 2px;
   position: relative;
-  z-index: var(--z-content);
+  z-index: var(--z-base);
+}
+
+.wavBar {
+  width: 2px;
+  border-radius: 1px;
+  background: var(--accent);
 }
 
 
 .cardTitle {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 22px;
   letter-spacing: 0.04em;
   color: var(--text);
   margin-bottom: 6px;
 }
 
-.footer {
+.cardFooter {
   padding: 12px 24px;
   border-top: 1px solid var(--border);
   display: flex;
@@ -136,14 +229,7 @@
   justify-content: space-between;
 }
 
-.cardDescription {
-  font-size: 10px;
-  color: var(--text);
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-}
-
-.tools {
+.cardTools {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
@@ -155,7 +241,6 @@
   text-transform: uppercase;
   padding: 2px 6px;
   background: rgba(240, 240, 240, 0.05);
-  ;
   color: var(--text);
   border: 1px solid var(--border);
 }
@@ -166,10 +251,22 @@
   transition: color var(--transition);
 }
 
+.card:hover .cardArrow {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
 .wideRight {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.cardFeatured .cardThumb {
+  height: 100%;
+  min-height: 180px;
+  border-bottom: none;
+  border-right: 1px solid var(--border-subtle);
 }
 
 .cardBody {
@@ -197,12 +294,8 @@
   color: var(--text-muted);
 }
 
-.featuredCard {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.description {
+.cardDescription {
+  font-family: var(--font-mono);
   font-size: 10px;
   color: var(--text-muted);
   line-height: 1.6;
@@ -214,4 +307,10 @@
   color: var(--accent);
   line-height: 1.6;
   letter-spacing: 0.02em;
+}
+
+.codeThumbSvg {
+  opacity: 0.2;
+  position: relative;
+  z-index: 1;
 }

@@ -4,16 +4,17 @@ import styles from "./Projects.module.css";
 
 type Props = {
   projects: Project[];
+  gridType: "sound" | "dev";
 };
 
-export default function ProjectsGrid({ projects }: Props) {
+export default function ProjectsGrid({ projects, gridType }: Props) {
   return (
-    <div className={styles.grid}>
+    <div className={gridType === "sound" ? styles.soundGrid : styles.devGrid}>
       {projects.map((project, index) => (
         <ProjectCard
           key={project.id}
           project={project}
-          featured={index === 0}
+          featured={gridType === "sound" && index === 0}
         />
       ))}
     </div>
